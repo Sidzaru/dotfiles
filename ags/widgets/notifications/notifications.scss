@@ -1,0 +1,68 @@
+.notifications * {
+    border: none;
+    margin: 0;
+    background: none;
+    padding: 0;
+}
+.notifications {
+    background-color: rgba($color8, 0.4);
+    border-radius: 20px;
+    .notificationsScrollable {
+        border-top: solid 2px rgba($color13, $alpha: 1.0);
+        min-width: 350px;
+        margin-bottom: 20px;
+        margin-top: 10px;
+    }
+    .notificationsContainer {
+        border: 0px solid;
+        border-radius: 25px;
+        border-color: $color14;
+    }
+    .notificationsDeleteButton {
+        color: $color15;
+        background-image: none;
+        border-left: solid 1px $color13;
+        border-radius: 0;
+        font-weight: normal;
+        background: none;
+        font-size: 18px;
+        padding: 0px;
+        margin-top: 6px;
+    }
+    .notificationsDeleteButton:hover{
+        color: $color14;
+    }
+    .notificationsTitle {
+        font-weight: normal;
+        color: $color15;
+        font-size: 20px;
+        margin-top: 5px;
+    }
+    .notificationButton {
+        color: $color15;
+        font-size: 16px;
+        border-top: solid 1px $color13;
+    }
+    .notificationButton:hover {
+        color: rgba($color7, 1);
+    }
+    .notificationText{
+        padding-top: 4px;
+        margin-top: 4px;
+        margin-right: 4px;
+        margin-left: 4px;
+    }
+    .notificationTextF {
+        padding-top: 4px;
+        border-top: none;    
+    }
+    .notificationTime {
+        color: $color6;
+        margin-right: 16px;
+        font-size: 15px;
+        padding-bottom: 4px;
+    } 
+    .notificationLine {
+        font-size: 1px;
+    }
+}

@@ -1,0 +1,75 @@
+.bar * {
+    padding: 0;
+    margin: 0;
+    background-image: none;
+}
+.bar {
+    background-color: rgba($color8, 0.4);
+    border-radius: 20px;
+    
+    .barActiveWindow, .barPlayerTitle {
+        color: $color6;
+    }
+    .barSideWindowButton {
+        color: $color15;
+        font-size: 18px;
+        background-color: rgba($color14, $alpha: 0);
+    }
+    .barSideWindowButton:hover{
+        color: $color5;
+    }
+
+    // // // Left part // // //
+    .barPlayerTitle:hover{
+        color: $color14;
+    }
+    .barCircularProgress {
+        color: $color6;
+        font-size: 3px;
+        background-color: $color3;
+    }
+    .barCircularProgressIcon{
+        font-size: 20px;
+        color: $color15;
+    }
+    .barCircularProgressValue {
+        color: $color15;
+        font-size: 14px;
+    }
+
+    // // // Center part // // //
+    .barSecondBackground {
+        background-color: rgba($color6, $alpha: 0.8);
+        padding-left: 20px;
+        padding-right: 20px;
+        border-radius: 20px;
+        min-height: 20px;
+        .focused {
+            color: $color15;
+            background-color: $color13;
+        }
+    }
+    .wsButton {
+        background-color: $color5;
+        color: $color14;
+        border-radius: 25px;
+        min-height: 20px;
+        min-width: 20px;
+        font-size: 14px;
+    }
+
+    // // // Right part // // //
+    .barTimeIcon {
+        font-size: 18px;
+        color: $color15;
+    }
+    .barTime {
+        color: $color15;
+        font-size: 16px;
+    }
+    .barDate {
+        color: $color15;
+        font-size: 14px;
+    }
+}
+    

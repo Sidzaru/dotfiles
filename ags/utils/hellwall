@@ -1,0 +1,24 @@
+#!/bin/bash
+
+rm -r ../cache/wallpaper.png.hellwal
+
+hellwal -d -n 1 -b 1 -i "../wallpaper.png" -o "../"
+
+cleanedString=$(echo $(<'../cache/wallpaper.png.hellwal') | sed 's/%%wallpaper = [^%]*%%//g')
+
+IFS='%%' read -ra parts <<< "$cleanedString"
+
+for part in "${parts[@]}"; do 
+  if [[ ! -z "$part" ]]; then
+    IFS='=' read -r key value <<< "$part"
+
+    key=$(echo $key | xargs)
+    value=$(echo "$value" | xargs)
+
+    scss+="\$$key : $value;\n"
+  fi
+done
+
+scss=$scss
+
+echo -e "$scss" > ../colors.scss
